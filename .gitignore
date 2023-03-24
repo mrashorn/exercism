@@ -1,7 +1,9 @@
+python/
+**.json
+**.txt
 **/build_script
 **/run
 **/build
 **/test
 **/HELP.md
-**/CMakelists.txt
-
+**CMake**
