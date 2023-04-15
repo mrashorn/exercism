@@ -6,22 +6,15 @@ namespace secret_handshake {
 
 	std::vector<std::string> commands(int input)
 	{
-		// convert input int to binary
-		std::bitset<5> binary_input = input;
+		//Second iteration, practicing how to use the & operator
 
 		std::vector<std::string> handshake = {};
-		std::vector<std::string> responses = {"wink", "double blink", 
-		"close your eyes", "jump"};
 
-
-		for(unsigned int i = 0; i < binary_input.size()-1; i++)
-		{
-			if(binary_input[i] == 1)
-				handshake.push_back(responses[i]);
-		}
-		
-		if(binary_input[4] == 1)
-			std::reverse(handshake.begin(), handshake.end());
+		if(1 & input) handshake.push_back("wink");
+		if(2 & input) handshake.push_back("double blink");
+		if(4 & input) handshake.push_back("close your eyes");
+		if(8 & input) handshake.push_back("jump");
+		if(16 & input) std::reverse(handshake.begin(), handshake.end());
 
 		return handshake;
 	}
