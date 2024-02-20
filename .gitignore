@@ -1,6 +1,6 @@
-python/
 **.json
 **.txt
+**.pyc
 **/build_script
 **/run
 **/build
